@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form and Result</title>
+</head>
+<body>
+    <!-- Question 17: Form loads result.html in an iframe after submission. -->
+    <h1>Simple Form</h1>
+    <form action="17_result.html" method="get" target="resultFrame">
+        <label for="text">Enter Text:</label>
+        <input type="text" id="text" name="text" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <br>
+    <iframe src="about:blank" name="resultFrame" width="100%" height="150" title="Result"></iframe>
+</body>
+</html>

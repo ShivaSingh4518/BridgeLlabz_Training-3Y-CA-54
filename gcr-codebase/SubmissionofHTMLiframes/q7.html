@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+</head>
+<body>
+    <!-- Question 7: Login form with a hidden CSRF token. -->
+    <h1>Login</h1>
+    <form action="#" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+
+        <!-- A CSRF token helps the server verify that a request came from an authorized form. -->
+        <input type="hidden" name="csrf_token" value="dummy-csrf-token-12345">
+
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>

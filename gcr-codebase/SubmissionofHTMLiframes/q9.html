@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File Upload Form</title>
+</head>
+<body>
+    <!-- Question 9: File upload restricted to JPG and PNG types. -->
+    <h1>Upload an Image</h1>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <label for="image">Choose Image:</label>
+        <input type="file" id="image" name="image" accept=".jpg,.png" required>
+        <p>Only JPG and PNG image files are allowed.</p>
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>
