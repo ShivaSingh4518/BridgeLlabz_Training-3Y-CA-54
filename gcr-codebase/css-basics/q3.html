@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Members</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Remove default browser spacing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f5f9;
+            color: #222;
+
+            min-height: 100vh;
+        }
+
+        /* Main container */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+
+            margin: 50px auto;
+        }
+
+        /* Main heading */
+        .container>h1 {
+            text-align: center;
+
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+
+            color: #1d3557;
+        }
+
+        /* Team container */
+        .team {
+            display: flex;
+
+            justify-content: space-between;
+            align-items: stretch;
+
+            gap: 25px;
+        }
+
+        /* ================= CARD ================= */
+
+        .card {
+            flex: 1;
+
+            background-color: white;
+
+            /* Box Model */
+            padding: 30px;
+            margin: 10px;
+
+            /* Border */
+            border: 2px solid #d0d7de;
+            border-radius: 15px;
+
+            /* Shadow */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+
+            text-align: center;
+
+            transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        /* Card hover effect */
+        .card:hover {
+            transform: translateY(-8px);
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Profile circle */
+        .profile {
+            width: 80px;
+            height: 80px;
+
+            margin: 0 auto 20px;
+
+            border-radius: 50%;
+
+            background-color: #457b9d;
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Name */
+        .card h2 {
+            font-size: 1.5rem;
+
+            margin-bottom: 10px;
+
+            color: #1d3557;
+        }
+
+        /* Role */
+        .card h3 {
+            font-size: 1.1rem;
+
+            margin-bottom: 15px;
+
+            color: #457b9d;
+        }
+
+        /* Description */
+        .card p {
+            font-size: 1rem;
+
+            line-height: 1.6;
+
+            color: #555;
+        }
+
+
+        /* ================= TEAM LEAD ================= */
+
+        /* Highlight first card */
+        .card:first-child {
+            background-color: #fff3cd;
+
+            border: 3px solid #e09f3e;
+
+            box-shadow: 0 8px 20px rgba(224, 159, 62, 0.3);
+        }
+
+        .card:first-child .profile {
+            background-color: #e09f3e;
+        }
+
+        .card:first-child h2 {
+            color: #8a5a00;
+        }
+
+        .card:first-child h3 {
+            color: #b36b00;
+        }
+
+
+        /* ================= RESPONSIVE ================= */
+
+        /* Screen smaller than 600px */
+        @media (max-width: 599px) {
+
+            .container {
+                width: 90%;
+                margin: 30px auto;
+            }
+
+            .container>h1 {
+                font-size: 2rem;
+                margin-bottom: 25px;
+            }
+
+            /* Change 3 columns into 1 column */
+            .team {
+                flex-direction: column;
+            }
+
+            .card {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Our Team</h1>
+
+        <div class="team">
+
+            <!-- Team Member 1 -->
+            <div class="card">
+                <div class="profile">GT</div>
+
+                <h2>Gaurav Thakur</h2>
+
+                <h3>Team Lead</h3>
+
+                <p>
+                    Gaurav is responsible for leading the team, managing
+                    tasks and ensuring that the project is completed on time.
+                </p>
+            </div>
+
+
+            <!-- Team Member 2 -->
+            <div class="card">
+                <div class="profile">AS</div>
+
+                <h2>Aman Sharma</h2>
+
+                <h3>Frontend Developer</h3>
+
+                <p>
+                    Aman works on creating attractive and responsive user
+                    interfaces using HTML, CSS and JavaScript.
+                </p>
+            </div>
+
+
+            <!-- Team Member 3 -->
+            <div class="card">
+                <div class="profile">RK</div>
+
+                <h2>Rahul Kumar</h2>
+
+                <h3>Backend Developer</h3>
+
+                <p>
+                    Rahul develops server-side functionality and works
+                    with databases and APIs for the project.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

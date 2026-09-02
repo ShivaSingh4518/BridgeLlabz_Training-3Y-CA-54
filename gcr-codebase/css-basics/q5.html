@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pricing Plans</title>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* =========================
+   BASIC RESET
+========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* =========================
+   BODY
+========================= */
+
+        body {
+            font-family: Arial, sans-serif;
+
+            background-color: #f4f7fb;
+
+            color: #222;
+
+            min-height: 100vh;
+        }
+
+
+        /* =========================
+   MAIN CONTAINER
+========================= */
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+
+            margin: 60px auto;
+
+            text-align: center;
+        }
+
+
+        /* Main heading */
+
+        .container h1 {
+            font-size: 2.5rem;
+
+            color: #1d3557;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* Subtitle */
+
+        .subtitle {
+            color: #666;
+
+            margin-bottom: 40px;
+
+            font-size: 1.1rem;
+        }
+
+
+        /* =========================
+   PRICING CONTAINER
+========================= */
+
+        .pricing-container {
+
+            /* Flexbox */
+            display: flex;
+
+            align-items: stretch;
+
+            justify-content: center;
+
+            gap: 25px;
+        }
+
+
+        /* =========================
+   PRICING PLAN
+========================= */
+
+        .plan {
+
+            /* Equal width */
+            flex: 1;
+
+            /* Equal height */
+            display: flex;
+            flex-direction: column;
+
+            background-color: white;
+
+            padding: 35px 25px;
+
+            border: 2px solid #d8dee9;
+
+            border-radius: 12px;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+            /* Smooth transition */
+            transition:
+                transform 0.3s ease,
+                background-color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        /* =========================
+   HOVER EFFECT
+========================= */
+
+        .plan:hover {
+
+            /* Slightly enlarge */
+            transform: scale(1.05);
+
+            /* Change background */
+            background-color: #eef6ff;
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+
+        /* =========================
+   PLAN HEADING
+========================= */
+
+        .plan h2 {
+            font-size: 1.8rem;
+
+            color: #1d3557;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+   PRICE
+========================= */
+
+        .price {
+            font-size: 2.5rem;
+
+            font-weight: bold;
+
+            color: #457b9d;
+
+            margin-bottom: 25px;
+        }
+
+        .price span {
+            font-size: 0.9rem;
+
+            font-weight: normal;
+
+            color: #777;
+        }
+
+
+        /* =========================
+   FEATURES
+========================= */
+
+        .plan ul {
+
+            list-style: none;
+
+            text-align: left;
+
+            margin-bottom: 30px;
+
+            /* Takes available space */
+            flex-grow: 1;
+        }
+
+        .plan li {
+
+            padding: 10px 0;
+
+            border-bottom: 1px solid #eee;
+
+            color: #555;
+        }
+
+
+        /* =========================
+   BUTTON
+========================= */
+
+        .btn {
+
+            display: block;
+
+            background-color: #1d3557;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 12px 20px;
+
+            border-radius: 6px;
+
+            font-weight: bold;
+
+            transition: background-color 0.3s ease;
+        }
+
+
+        .btn:hover {
+            background-color: #457b9d;
+        }
+
+
+        /* =========================
+   MOST POPULAR PLAN
+========================= */
+
+        .popular {
+
+            /* Different border */
+            border: 3px solid #e09f3e;
+
+            background-color: #fff9e6;
+
+            position: relative;
+
+            /* Slightly larger initially */
+            transform: scale(1.02);
+        }
+
+
+        /* Popular label */
+
+        .popular-label {
+
+            background-color: #e09f3e;
+
+            color: white;
+
+            font-size: 0.85rem;
+
+            font-weight: bold;
+
+            padding: 6px 15px;
+
+            border-radius: 20px;
+
+            width: fit-content;
+
+            margin: -50px auto 20px;
+        }
+
+
+        /* Popular plan hover */
+
+        .popular:hover {
+
+            transform: scale(1.07);
+
+            background-color: #fff3cd;
+        }
+
+
+        /* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+        @media (max-width: 700px) {
+
+            .pricing-container {
+
+                /* One column */
+                flex-direction: column;
+            }
+
+            .plan {
+
+                width: 100%;
+            }
+
+            .popular {
+
+                transform: none;
+            }
+
+            .popular:hover {
+
+                transform: scale(1.03);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Choose Your Plan</h1>
+
+        <p class="subtitle">
+            Select the plan that best suits your needs.
+        </p>
+
+
+        <!-- Pricing Plans -->
+        <div class="pricing-container">
+
+
+            <!-- BASIC PLAN -->
+            <div class="plan">
+
+                <h2>Basic</h2>
+
+                <div class="price">
+                    ₹199
+                    <span>/month</span>
+                </div>
+
+                <ul>
+                    <li>✔ 5 Projects</li>
+                    <li>✔ 5 GB Storage</li>
+                    <li>✔ Basic Support</li>
+                    <li>✔ Email Support</li>
+                </ul>
+
+                <a href="#" class="btn">Choose Basic</a>
+
+            </div>
+
+
+            <!-- STANDARD PLAN -->
+            <div class="plan popular">
+
+                <div class="popular-label">
+                    Most Popular
+                </div>
+
+                <h2>Standard</h2>
+
+                <div class="price">
+                    ₹499
+                    <span>/month</span>
+                </div>
+
+                <ul>
+                    <li>✔ 20 Projects</li>
+                    <li>✔ 50 GB Storage</li>
+                    <li>✔ Priority Support</li>
+                    <li>✔ Advanced Analytics</li>
+                    <li>✔ Custom Domain</li>
+                </ul>
+
+                <a href="#" class="btn">Choose Standard</a>
+
+            </div>
+
+
+            <!-- PREMIUM PLAN -->
+            <div class="plan">
+
+                <h2>Premium</h2>
+
+                <div class="price">
+                    ₹999
+                    <span>/month</span>
+                </div>
+
+                <ul>
+                    <li>✔ Unlimited Projects</li>
+                    <li>✔ 200 GB Storage</li>
+                    <li>✔ 24/7 Support</li>
+                    <li>✔ Advanced Analytics</li>
+                    <li>✔ Custom Domain</li>
+                    <li>✔ Premium Features</li>
+                </ul>
+
+                <a href="#" class="btn">Choose Premium</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

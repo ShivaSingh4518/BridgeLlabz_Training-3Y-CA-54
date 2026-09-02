@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            color: #172033;
+            min-height: 100vh;
+        }
+
+        .page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 70px;
+
+            background-color: #172033;
+            color: white;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 0 5%;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 1.6rem;
+        }
+
+        nav {
+            display: flex;
+            gap: 2em;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            color: #61dafb;
+        }
+
+        main {
+            flex: 1;
+
+            padding-top: 70px;
+        }
+
+        .hero {
+            min-height: 75vh;
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            padding: 5%;
+            gap: 40px;
+        }
+
+        .bio {
+            width: 55%;
+        }
+
+        .bio h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1em;
+        }
+
+        .bio p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .button {
+            display: inline-block;
+
+            background-color: #172033;
+            color: white;
+
+            padding: 12px 24px;
+            border-radius: 6px;
+
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #2c4268;
+        }
+
+        .profile {
+            width: 30%;
+            text-align: center;
+        }
+
+        .profile img {
+            width: 250px;
+            height: 250px;
+
+            max-width: 100%;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+            border: 5px solid #172033;
+        }
+
+        .about {
+            width: 80%;
+            margin: 30px auto;
+            padding: 3em;
+
+            background-color: #ffffff;
+            border-radius: 10px;
+        }
+
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 0.7em;
+        }
+
+        .about p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .contact {
+            width: 80%;
+            margin: 30px auto;
+            padding: 3em;
+
+            background-color: #172033;
+            color: white;
+
+            border-radius: 10px;
+        }
+
+        .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 1em;
+        }
+
+        .contact p {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            min-height: 60px;
+
+            background-color: #0d1321;
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 0.9rem;
+            padding: 10px;
+        }
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 0 20px;
+            }
+
+            header h1 {
+                font-size: 1.2rem;
+            }
+
+            nav {
+                gap: 1em;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .bio {
+                width: 90%;
+            }
+
+            .profile {
+                width: 80%;
+            }
+
+            .profile img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page">
+
+        <header>
+            <h1>Gaurav Thakur</h1>
+
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+
+            <section id="home" class="hero">
+                <div class="bio">
+                    <h2>Hello, I'm Gaurav 👋</h2>
+
+                    <p>
+                        I am a B.Tech Computer Science student interested in
+                        Java, Data Structures and Algorithms, Web Development,
+                        and Cloud Computing. I enjoy learning new technologies
+                        and building useful projects.
+                    </p>
+
+                    <a href="#contact" class="button">Contact Me</a>
+                </div>
+
+                <div class="profile">
+                    <img src="profilePicture.jpeg" alt="Profile picture of Gaurav">
+                </div>
+            </section>
+
+            <section id="about" class="about">
+                <h2>About Me</h2>
+                <p>
+                    I am currently developing my programming and problem-solving
+                    skills. My main programming language is Java, and I am
+                    practicing DSA regularly.
+                </p>
+            </section>
+
+            <section id="contact" class="contact">
+                <h2>Contact</h2>
+                <p>Email: gaurav@example.com</p>
+                <p>GitHub: github.com/gaurav</p>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>© 2026 Gaurav Thakur | All Rights Reserved</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

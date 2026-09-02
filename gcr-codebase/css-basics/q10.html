@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Modern Website</title>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* =================================
+   BASIC RESET
+================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* =================================
+   BODY
+================================= */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+
+            background-color: #f4f6f9;
+
+            color: #222;
+
+            line-height: 1.6;
+        }
+
+
+        /* =================================
+   HEADER
+================================= */
+
+        .header {
+
+            /*
+       Sticky positioning
+       Header stays at top while scrolling
+    */
+            position: sticky;
+
+            top: 0;
+
+            width: 100%;
+
+            height: 70px;
+
+            background: linear-gradient(90deg,
+                    #1d3557,
+                    #457b9d);
+
+            color: white;
+
+            display: flex;
+
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 0 6%;
+
+            /* Box Model */
+            border-bottom: 3px solid #a8dadc;
+
+            z-index: 1000;
+        }
+
+
+        .logo {
+
+            font-size: 1.5rem;
+
+            font-weight: bold;
+
+            /*
+       Outline property
+    */
+            outline: 2px solid rgba(255, 255, 255, 0.4);
+
+            padding: 5px 10px;
+        }
+
+
+        .header nav {
+
+            display: flex;
+
+            gap: 25px;
+        }
+
+
+        .header nav a {
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            padding: 8px 12px;
+
+            border-radius: 5px;
+
+            transition: background-color 0.3s ease;
+        }
+
+
+        .header nav a:hover {
+
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+
+        /* =================================
+   HERO SECTION
+================================= */
+
+        .hero {
+
+            /*
+       Relative positioning
+       Children can be positioned
+       relative to this section
+    */
+            position: relative;
+
+            min-height: 90vh;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            /*
+       Large background image
+    */
+            background-image:
+                url("https://images.unsplash.com/photo-1497366811353-6870744d04b2");
+
+            background-size: cover;
+
+            background-position: center;
+
+            color: white;
+
+            overflow: hidden;
+        }
+
+
+        /* =================================
+   HERO OVERLAY
+================================= */
+
+        .hero-overlay {
+
+            /*
+       Absolute positioning
+    */
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            /*
+       rgba() color
+    */
+            background-color: rgba(0, 0, 0, 0.55);
+        }
+
+
+        /* =================================
+   HERO CONTENT
+================================= */
+
+        .hero-content {
+
+            /*
+       Relative positioning
+       Content appears above overlay
+    */
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 800px;
+
+            padding: 30px;
+        }
+
+
+        .hero-content h1 {
+
+            font-size: 4rem;
+
+            font-weight: 900;
+
+            margin-bottom: 20px;
+
+            /*
+       Gradient text background effect
+    */
+            background: linear-gradient(90deg,
+                    #ffffff,
+                    #a8dadc);
+
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        .hero-content p {
+
+            font-size: 1.3rem;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* Hero Button */
+
+        .hero-button {
+
+            display: inline-block;
+
+            padding: 14px 30px;
+
+            background-color: #e63946;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 6px;
+
+            border: 2px solid white;
+
+            transition:
+                transform 0.3s ease,
+                background-color 0.3s ease;
+        }
+
+
+        .hero-button:hover {
+
+            transform: scale(1.05);
+
+            background-color: #c92f3b;
+        }
+
+
+        /* =================================
+   ABOUT SECTION
+================================= */
+
+        .about {
+
+            /*
+       Two columns using Flexbox
+    */
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 50px;
+
+            padding: 80px 8%;
+
+            background-color: white;
+
+            /*
+       Margin + Border
+    */
+            margin: 30px auto;
+
+            border-top: 5px solid #457b9d;
+        }
+
+
+        .about-text {
+
+            width: 50%;
+        }
+
+
+        .about-text h2 {
+
+            font-size: 2.5rem;
+
+            color: #1d3557;
+
+            margin-bottom: 20px;
+
+            /*
+       Outline property
+    */
+            outline: 2px dashed rgba(69, 123, 157, 0.3);
+
+            outline-offset: 8px;
+        }
+
+
+        .about-text p {
+
+            margin-bottom: 20px;
+
+            color: #555;
+
+            text-align: justify;
+        }
+
+
+        .about-image {
+
+            width: 45%;
+
+            /*
+       Relative positioning
+    */
+            position: relative;
+        }
+
+
+        .about-image img {
+
+            width: 100%;
+
+            height: 350px;
+
+            object-fit: cover;
+
+            border-radius: 12px;
+
+            border: 5px solid #1d3557;
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+
+        /* =================================
+   SERVICES
+================================= */
+
+        .services {
+
+            padding: 80px 8%;
+
+            background:
+                linear-gradient(135deg,
+                    #eaf4f4,
+                    #dceef2);
+
+            text-align: center;
+        }
+
+
+        .services>h2 {
+
+            font-size: 2.7rem;
+
+            color: #1d3557;
+
+            margin-bottom: 45px;
+        }
+
+
+        /* Service container */
+
+        .service-container {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 30px;
+        }
+
+
+        /* Service box */
+
+        .service-box {
+
+            flex: 1;
+
+            max-width: 350px;
+
+            background-color: white;
+
+            padding: 35px 25px;
+
+            border: 2px solid #d0d7de;
+
+            border-radius: 12px;
+
+            /*
+       Box shadow
+    */
+            box-shadow:
+                0 8px 20px rgba(0, 0, 0, 0.12);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .service-box:hover {
+
+            transform: translateY(-10px);
+
+            box-shadow:
+                0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+
+        .service-icon {
+
+            font-size: 3rem;
+
+            margin-bottom: 15px;
+        }
+
+
+        .service-box h3 {
+
+            font-size: 1.4rem;
+
+            color: #1d3557;
+
+            margin-bottom: 15px;
+        }
+
+
+        .service-box p {
+
+            color: #666;
+        }
+
+
+        /* =================================
+   CONTACT
+================================= */
+
+        .contact {
+
+            padding: 80px 8%;
+
+            background-color: #1d3557;
+
+            color: white;
+
+            text-align: center;
+        }
+
+
+        .contact-container {
+
+            max-width: 650px;
+
+            margin: auto;
+
+            /*
+       Relative positioning
+    */
+            position: relative;
+
+            padding: 40px;
+
+            border: 2px solid rgba(255, 255, 255, 0.3);
+
+            border-radius: 12px;
+
+            background-color:
+                rgba(255, 255, 255, 0.08);
+        }
+
+
+        .contact h2 {
+
+            font-size: 2.5rem;
+
+            margin-bottom: 10px;
+        }
+
+
+        .contact>.contact-container>p {
+
+            margin-bottom: 30px;
+
+            color: #dbeafe;
+        }
+
+
+        /* =================================
+   FORM
+================================= */
+
+        form {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 15px;
+        }
+
+
+        form input,
+        form textarea {
+
+            width: 100%;
+
+            padding: 14px;
+
+            font-size: 1rem;
+
+            border: 2px solid transparent;
+
+            border-radius: 6px;
+
+            outline: none;
+
+            background-color: rgba(255, 255, 255, 0.95);
+
+            color: #222;
+
+            transition: border-color 0.3s ease;
+        }
+
+
+        form input:focus,
+        form textarea:focus {
+
+            border-color: #a8dadc;
+        }
+
+
+        form textarea {
+
+            resize: vertical;
+        }
+
+
+        form button {
+
+            padding: 14px;
+
+            border: none;
+
+            border-radius: 6px;
+
+            background-color: #e63946;
+
+            color: white;
+
+            font-size: 1rem;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: background-color 0.3s ease;
+        }
+
+
+        form button:hover {
+
+            background-color: #c92f3b;
+        }
+
+
+        /* =================================
+   FOOTER
+================================= */
+
+        footer {
+
+            /*
+       Fixed positioning used in
+       a different section
+    */
+            position: relative;
+
+            background-color: #0d1b2a;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+
+            border-top: 3px solid #457b9d;
+        }
+
+
+        /* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+        @media (max-width: 800px) {
+
+            /* Header */
+
+            .header {
+
+                height: auto;
+
+                padding: 15px;
+
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+
+            .header nav {
+
+                gap: 8px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+
+            /* Hero */
+
+            .hero {
+
+                min-height: 70vh;
+            }
+
+
+            .hero-content h1 {
+
+                font-size: 2.5rem;
+            }
+
+
+            /* About */
+
+            .about {
+
+                flex-direction: column;
+
+                padding: 60px 6%;
+            }
+
+
+            .about-text,
+            .about-image {
+
+                width: 100%;
+            }
+
+
+            /* Services */
+
+            .service-container {
+
+                flex-direction: column;
+
+                align-items: center;
+            }
+
+
+            .service-box {
+
+                width: 100%;
+
+                max-width: 500px;
+            }
+
+
+            /* Contact */
+
+            .contact-container {
+
+                padding: 25px;
+            }
+        }
+
+
+        /* =================================
+   SMALL MOBILE
+================================= */
+
+        @media (max-width: 500px) {
+
+            .hero-content h1 {
+
+                font-size: 2rem;
+            }
+
+
+            .hero-content p {
+
+                font-size: 1rem;
+            }
+
+
+            .about-text h2,
+            .services>h2,
+            .contact h2 {
+
+                font-size: 2rem;
+            }
+
+
+            .about-image img {
+
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            MyWebsite
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section id="home" class="hero">
+
+        <!-- Dark overlay -->
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <h1>Welcome to My Website</h1>
+
+            <p>
+                We create modern, creative and responsive
+                digital experiences.
+            </p>
+
+            <a href="#services" class="hero-button">
+                Explore Services
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="about">
+
+        <div class="about-text">
+
+            <h2>About Us</h2>
+
+            <p>
+                We are a creative team focused on building
+                modern websites and digital solutions.
+                Our goal is to create websites that are
+                attractive, fast and easy to use.
+            </p>
+
+            <p>
+                We combine creativity with modern web
+                technologies to provide high-quality
+                solutions for individuals and businesses.
+            </p>
+
+        </div>
+
+
+        <div class="about-image">
+
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72" alt="Modern office">
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section id="services" class="services">
+
+        <h2>Our Services</h2>
+
+        <div class="service-container">
+
+            <!-- Service 1 -->
+            <div class="service-box">
+
+                <div class="service-icon">💻</div>
+
+                <h3>Web Development</h3>
+
+                <p>
+                    We build responsive and modern websites
+                    using the latest web technologies.
+                </p>
+
+            </div>
+
+
+            <!-- Service 2 -->
+            <div class="service-box">
+
+                <div class="service-icon">🎨</div>
+
+                <h3>UI/UX Design</h3>
+
+                <p>
+                    We create clean, attractive and
+                    user-friendly interfaces.
+                </p>
+
+            </div>
+
+
+            <!-- Service 3 -->
+            <div class="service-box">
+
+                <div class="service-icon">☁️</div>
+
+                <h3>Cloud Solutions</h3>
+
+                <p>
+                    We provide scalable and reliable
+                    cloud-based solutions for businesses.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="contact">
+
+        <div class="contact-container">
+
+            <h2>Contact Us</h2>
+
+            <p>
+                Have a project in mind? Send us a message.
+            </p>
+
+
+            <form>
+
+                <input type="text" placeholder="Your Name" required>
+
+                <input type="email" placeholder="Your Email" required>
+
+                <input type="text" placeholder="Subject" required>
+
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 MyWebsite. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

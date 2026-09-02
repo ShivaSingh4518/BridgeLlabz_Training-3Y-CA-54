@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Daily Times - Magazine</title>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* =========================
+   BASIC RESET
+========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* =========================
+   BODY
+========================= */
+
+        body {
+            background-color: #d9d9d9;
+
+            color: #222;
+
+            font-family: Georgia, "Times New Roman", serif;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+   MAIN NEWSPAPER
+========================= */
+
+        .newspaper {
+
+            max-width: 1200px;
+
+            margin: 40px auto;
+
+            padding: 40px;
+
+            background-color: #fff;
+
+            border: 1px solid #bbb;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* =========================
+   MAIN HEADING
+========================= */
+
+        .newspaper>h1 {
+
+            text-align: center;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 3rem;
+
+            font-weight: 900;
+
+            letter-spacing: 5px;
+
+            margin-bottom: 10px;
+
+            border-bottom: 4px solid #222;
+
+            padding-bottom: 15px;
+
+            /* Heading spans all columns */
+            column-span: all;
+        }
+
+
+        /* =========================
+   ARTICLE HEADING
+========================= */
+
+        .newspaper>h2 {
+
+            text-align: center;
+
+            font-family: Arial, sans-serif;
+
+            font-size: 1.8rem;
+
+            font-weight: 700;
+
+            margin-bottom: 30px;
+
+            padding-bottom: 15px;
+
+            border-bottom: 2px solid #555;
+
+            /* Span all columns */
+            column-span: all;
+        }
+
+
+        /* =========================
+   THREE COLUMNS
+========================= */
+
+        .article {
+
+            /* Three vertical columns */
+            column-count: 3;
+
+            /* Space between columns */
+            column-gap: 40px;
+
+            font-size: 1rem;
+
+            /* Justify text */
+            text-align: justify;
+        }
+
+
+        /* =========================
+   PARAGRAPHS
+========================= */
+
+        .article p {
+
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+   FLOAT IMAGE
+========================= */
+
+        .article-image {
+
+            width: 180px;
+
+            height: 130px;
+
+            object-fit: cover;
+
+            /* Align image to left */
+            float: left;
+
+            margin-right: 15px;
+
+            margin-bottom: 10px;
+
+            border-radius: 5px;
+
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        }
+
+
+        /* =========================
+   FOOTER
+========================= */
+
+        footer {
+
+            background-color: #222;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 20px;
+
+            font-family: Arial, sans-serif;
+        }
+
+
+        /* =========================
+   TABLET
+========================= */
+
+        @media (max-width: 900px) {
+
+            .newspaper {
+
+                margin: 20px;
+
+                padding: 30px;
+            }
+
+            .article {
+
+                /* Two columns */
+                column-count: 2;
+
+                column-gap: 30px;
+            }
+
+            .newspaper>h1 {
+
+                font-size: 2.4rem;
+            }
+        }
+
+
+        /* =========================
+   MOBILE
+========================= */
+
+        @media (max-width: 600px) {
+
+            .newspaper {
+
+                margin: 10px;
+
+                padding: 20px;
+            }
+
+            .newspaper>h1 {
+
+                font-size: 1.8rem;
+
+                letter-spacing: 2px;
+            }
+
+            .newspaper>h2 {
+
+                font-size: 1.4rem;
+            }
+
+            .article {
+
+                /* One column */
+                column-count: 1;
+
+                column-gap: 0;
+
+                font-size: 1rem;
+            }
+
+            .article-image {
+
+                width: 150px;
+
+                height: 110px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="newspaper">
+
+        <!-- Heading spanning all columns -->
+        <h1>THE DAILY TIMES</h1>
+
+        <h2>Technology: Changing the World Around Us</h2>
+
+        <!-- Three-column content -->
+        <div class="article">
+
+            <!-- Floating Image -->
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Technology"
+                class="article-image">
+
+            <p>
+                Technology has become an essential part of modern life.
+                From smartphones and computers to artificial intelligence,
+                technology is changing the way people communicate, work
+                and learn. The rapid development of new technologies has
+                created opportunities that were unimaginable a few decades
+                ago.
+            </p>
+
+            <p>
+                One of the most important changes can be seen in the field
+                of communication. People can now communicate with others
+                from almost anywhere in the world within seconds. Social
+                media, email and video conferencing have made communication
+                faster and easier.
+            </p>
+
+            <p>
+                Education has also benefited greatly from technology.
+                Students can access online courses, digital books and
+                educational videos from their homes. Online learning has
+                made education more flexible and accessible to millions
+                of people.
+            </p>
+
+            <p>
+                Businesses are also using technology to improve their
+                services. Cloud computing, data analytics and automation
+                allow organizations to work more efficiently. Companies
+                can reach customers across the world using digital
+                platforms and online services.
+            </p>
+
+            <p>
+                Artificial intelligence is another major development.
+                Modern AI systems can process huge amounts of information
+                and assist humans in solving complex problems. AI is being
+                used in healthcare, transportation, education and many
+                other industries.
+            </p>
+
+            <p>
+                However, technology also creates challenges. Privacy,
+                cybersecurity and excessive screen time are important
+                concerns. People need to use technology responsibly while
+                maintaining a healthy balance between digital and real-world
+                activities.
+            </p>
+
+            <p>
+                The future of technology looks promising. New innovations
+                are likely to continue changing our lives and creating new
+                opportunities. With responsible use and proper awareness,
+                technology can become a powerful tool for improving society.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 The Daily Times | Magazine Edition</p>
+    </footer>
+
+</body>
+
+</html>

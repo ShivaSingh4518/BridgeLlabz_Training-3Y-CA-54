@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Jaipur</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #2d1b1b;
+        }
+
+
+        header {
+            background-color: #7b2d3b;
+            color: white;
+
+            padding: 25px;
+            text-align: center;
+
+            border-bottom: 5px solid #f4b183;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+
+            font-size: 1.1rem;
+            font-weight: bold;
+
+            padding: 8px 15px;
+            border: 2px solid transparent;
+        }
+
+        nav a:hover {
+            border: 2px solid white;
+            border-radius: 5px;
+        }
+
+
+        section {
+            width: 100%;
+            min-height: 400px;
+
+            padding: 70px 10%;
+            margin: 0;
+        }
+
+        .content {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section h2 {
+            margin-bottom: 25px;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+
+        .home-section {
+            background: linear-gradient(135deg,
+                    #ffb07c,
+                    #e56b6f,
+                    #7b2d3b);
+
+            color: white;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .home-section h2 {
+            font-size: 3rem;
+            font-weight: 900;
+        }
+
+
+        .history-section {
+            background-color: #fff3e6;
+
+            border-top: 5px solid #e6a15c;
+            border-bottom: 5px solid #e6a15c;
+        }
+
+        .history-section h2 {
+            font-size: 2.4rem;
+            font-weight: 700;
+        }
+
+
+        .places-section {
+            background: radial-gradient(circle,
+                    #ffe5b4,
+                    #f4a261,
+                    #9c3d54);
+
+            color: #2d1b1b;
+        }
+
+        .places-section h2 {
+            font-size: 2.7rem;
+            font-weight: 800;
+
+            margin-bottom: 35px;
+        }
+
+        .places {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+        }
+
+        .place-card {
+            background-color: white;
+
+            width: 32%;
+
+            padding: 25px;
+            margin: 10px;
+
+            border: 3px solid #7b2d3b;
+            border-radius: 10px;
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .place-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+
+            margin-bottom: 15px;
+        }
+
+        .place-card p {
+            font-size: 1rem;
+        }
+
+
+        .culture-section {
+            background-color: #5c374c;
+            color: white;
+
+            border-top: 5px solid #f4b183;
+        }
+
+        .culture-section h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
+
+
+        footer {
+            background-color: #24151a;
+            color: white;
+
+            text-align: center;
+
+            padding: 25px;
+
+            font-size: 1rem;
+        }
+
+
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            section {
+                padding: 50px 5%;
+            }
+
+            .places {
+                flex-direction: column;
+            }
+
+            .place-card {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .home-section h2 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <h1>Jaipur - The Pink City</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#history">History</a>
+            <a href="#places">Famous Places</a>
+            <a href="#culture">Culture</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="home" class="home-section">
+            <div class="content">
+                <h2>Welcome to Jaipur</h2>
+
+                <p>
+                    Jaipur is the capital city of Rajasthan and is popularly
+                    known as the Pink City. It is famous for its royal
+                    palaces, forts, colorful markets and rich culture.
+                </p>
+            </div>
+        </section>
+
+        <section id="history" class="history-section">
+            <div class="content">
+                <h2>History of Jaipur</h2>
+
+                <p>
+                    Jaipur was founded in 1727 by Maharaja Sawai Jai Singh II.
+                    It was one of India's earliest planned cities. The city
+                    is known for its beautiful architecture and historical
+                    monuments.
+                </p>
+            </div>
+        </section>
+
+        <section id="places" class="places-section">
+            <div class="content">
+                <h2>Famous Places</h2>
+
+                <div class="places">
+                    <div class="place-card">
+                        <h3>Hawa Mahal</h3>
+                        <p>
+                            Hawa Mahal is one of Jaipur's most famous
+                            landmarks, known for its unique windows.
+                        </p>
+                    </div>
+
+                    <div class="place-card">
+                        <h3>Amber Fort</h3>
+                        <p>
+                            Amber Fort is a magnificent historical fort
+                            located on a hill near Jaipur.
+                        </p>
+                    </div>
+
+                    <div class="place-card">
+                        <h3>City Palace</h3>
+                        <p>
+                            City Palace is a beautiful royal complex
+                            containing museums and courtyards.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="culture" class="culture-section">
+            <div class="content">
+                <h2>Culture of Jaipur</h2>
+
+                <p>
+                    Jaipur is famous for Rajasthani music, dance, traditional
+                    clothing, handicrafts and delicious local food. Festivals
+                    add vibrant colors to the city's cultural life.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 About Jaipur | Designed using HTML & CSS</p>
+    </footer>
+
+</body>
+
+</html>

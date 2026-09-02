@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us</title>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* =========================
+   BASIC RESET
+========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* =========================
+   BODY
+========================= */
+
+        body {
+            font-family: Arial, sans-serif;
+
+            background-color: #eaf2f8;
+
+            color: #1d3557;
+
+            min-height: 100vh;
+        }
+
+
+        /* =========================
+   CONTACT PAGE
+========================= */
+
+        .contact-page {
+
+            /* Vertical + Horizontal Center */
+            min-height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            padding: 20px;
+        }
+
+
+        /* =========================
+   FORM
+========================= */
+
+        .contact-form {
+
+            width: 100%;
+            max-width: 500px;
+
+            background-color: white;
+
+            padding: 40px;
+
+            border-radius: 12px;
+
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+
+        /* =========================
+   HEADING
+========================= */
+
+        .contact-form h1 {
+
+            text-align: center;
+
+            font-size: 2.2rem;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* Intro text */
+
+        .intro {
+
+            text-align: center;
+
+            color: #666;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+   FORM GROUP
+========================= */
+
+        .form-group {
+
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+   LABEL
+========================= */
+
+        .form-group label {
+
+            display: block;
+
+            margin-bottom: 8px;
+
+            font-weight: bold;
+
+            color: #1d3557;
+        }
+
+
+        /* =========================
+   INPUT + TEXTAREA
+========================= */
+
+        .form-group input,
+        .form-group textarea {
+
+            width: 100%;
+
+            padding: 13px;
+
+            font-size: 1rem;
+
+            font-family: Arial, sans-serif;
+
+            background-color: #f8fafc;
+
+            color: #222;
+
+            border: 2px solid #ccd6e0;
+
+            border-radius: 7px;
+
+            /* Subtle shadow */
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+            outline: none;
+
+            transition:
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        /* =========================
+   FOCUS EFFECT
+========================= */
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+
+            /* Border changes when focused */
+            border-color: #457b9d;
+
+            box-shadow: 0 0 8px rgba(69, 123, 157, 0.3);
+
+            background-color: white;
+        }
+
+
+        /* =========================
+   TEXTAREA
+========================= */
+
+        .form-group textarea {
+
+            resize: vertical;
+
+            min-height: 130px;
+        }
+
+
+        /* =========================
+   BUTTON
+========================= */
+
+        button {
+
+            width: 100%;
+
+            padding: 14px;
+
+            border: none;
+
+            border-radius: 7px;
+
+            background-color: #1d3557;
+
+            color: white;
+
+            font-size: 1rem;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: background-color 0.3s ease;
+        }
+
+
+        button:hover {
+
+            background-color: #457b9d;
+        }
+
+
+        /* =========================
+   MOBILE
+========================= */
+
+        @media (max-width: 600px) {
+
+            .contact-form {
+
+                padding: 25px;
+            }
+
+            .contact-form h1 {
+
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="contact-page">
+
+        <form class="contact-form">
+
+            <h1>Contact Us</h1>
+
+            <p class="intro">
+                Have a question? Send us a message.
+            </p>
+
+
+            <!-- Name -->
+            <div class="form-group">
+                <label for="name">Name</label>
+
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email</label>
+
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+
+            <!-- Subject -->
+            <div class="form-group">
+                <label for="subject">Subject</label>
+
+                <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
+            </div>
+
+
+            <!-- Message -->
+            <div class="form-group">
+                <label for="message">Message</label>
+
+                <textarea id="message" name="message" rows="6" placeholder="Write your message..." required></textarea>
+            </div>
+
+
+            <!-- Submit Button -->
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </main>
+
+</body>
+
+</html>
