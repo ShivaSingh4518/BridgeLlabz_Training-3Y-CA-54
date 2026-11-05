@@ -1,0 +1,135 @@
+/* Apply consistent sizing and remove default spacing. */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set the overall page appearance and layout. */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+/* Style the page header. */
+.header {
+    padding: 35px 20px;
+    background: #1e293b;
+    color: white;
+    text-align: center;
+}
+
+.header h1 {
+    margin-bottom: 8px;
+    font-size: 2rem;
+}
+
+.header p {
+    color: #cbd5e1;
+}
+
+/* Keep the main content centered and responsive. */
+main {
+    flex: 1;
+    padding: 50px 20px;
+}
+
+/* Style the gallery section. */
+.gallery-section {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.gallery-section h2 {
+    margin-bottom: 25px;
+    color: #1e3a5f;
+    text-align: center;
+}
+
+/* Create the responsive grid required by the assignment. */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+/* Style each image card. */
+.gallery-item {
+    overflow: hidden;
+    background: white;
+    border: 1px solid #dbe2ea;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Set a consistent image size and smooth filter transition. */
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    display: block;
+    object-fit: cover;
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+/* Apply a different filter to each image. */
+.blur {
+    filter: blur(3px);
+}
+
+.grayscale {
+    filter: grayscale(100%);
+}
+
+.sepia {
+    filter: sepia(100%);
+}
+
+.brightness {
+    filter: brightness(1.5);
+}
+
+.contrast {
+    filter: contrast(1.7);
+}
+
+.hue {
+    filter: hue-rotate(120deg);
+}
+
+/* Remove the filter when an image is hovered. */
+.gallery-item img:hover {
+    filter: none;
+    transform: scale(1.03);
+}
+
+/* Style the captions below each image. */
+.gallery-item figcaption {
+    padding: 15px;
+    color: #334155;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Style the footer. */
+.footer {
+    padding: 20px;
+    background: #1e293b;
+    color: #cbd5e1;
+    text-align: center;
+}
+
+/* Stack all gallery items into one column below 600px. */
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 240px;
+    }
+}
